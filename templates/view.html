@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grind Employee Base</title>
+    <style>
+        body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    margin:40px;
+}
+
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    width:320px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+.card h2{
+    color:#2c3e50;
+    margin-bottom:15px;
+}
+
+button{
+    padding:10px 18px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.edit{
+    background:rgb(97, 203, 97);
+    color:white;
+}
+
+.delete{
+    background:rgb(194, 194, 59);
+    color:white;
+}
+
+button:hover{
+    opacity:.9;
+}
+ footer {
+      color : gray;
+      font-family: Arial, Helvetica, sans-serif;
+      font-style: italic;
+      text-align: center;
+      margin-top: 20px;
+     }
+@media (max-width:768px){
+
+.container{
+    flex-direction:column;
+}
+
+.card{
+    width:100%;
+}
+
+body{
+    margin:15px;
+}
+
+button{
+    width:100%;
+    margin-top:10px;
+}
+
+}
+    </style>
+</head>
+
+<body>
+
+<h1><span class = "highlight" style = "color: rgb(104, 232, 104);" >Grind</span> Employee Base</h1>
+<p>Here you can navigate and find the right person for your needs.</p>
+
+<div class="container">
+
+{% for applicant in info %}
+
+<div class="card">
+
+    <h2>{{ applicant["name"] }}</h2>
+
+    <p><strong>Age:</strong> {{ applicant["age"] }}</p>
+
+    <p><strong>Email:</strong> {{ applicant["email"] }}</p>
+
+    <p><strong>Education:</strong> {{ applicant["academic_achievement"] }}</p>
+
+    <p><strong>Skills:</strong> {{ applicant["skills"] }}</p>
+
+    <p><strong>Job:</strong> {{ applicant["job_description"] }}</p>
+
+    <a href="/edit/{{ loop.index0 }}">
+        <button class="edit">Edit</button>
+    </a>
+
+    <a href="/delete/{{ loop.index0 }}">
+        <button class="delete">Delete</button>
+    </a>
+
+</div>
+
+{% endfor %}
+
+</div>
+<footer>
+
+      <p>
+         &copy;2026 Grind 
+      </p>
+    </footer>
+
+</body>
+</html>

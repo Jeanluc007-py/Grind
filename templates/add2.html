@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title> info-grind.com</title>
+        <style>
+            *{
+                margin : 0;
+                padding : 0;
+                box-sizing: border-box;
+            }
+            body {
+                padding :40px 20px;
+                font-family :Arial, Helvetica, sans-serif;
+                background: fixed;
+            }
+            .container {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 400;
+            }
+            .card {
+                padding : 30px;
+                color : black;
+                margin : auto;
+                margin-top : 25px;
+                border-radius: 25px;
+                border : none;
+                background-color : rgb(241, 245, 249);
+                color : black;
+                max-width : 600px;
+                box-shadow: inset;
+                font-weight: 300;
+            }
+            .card p {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            .btn {
+                color :white;
+                background-color : rgb(84, 169, 84);
+                border-color :  rgb(84, 169, 84);
+                cursor : pointer;
+                border : none;
+                width: 80%;
+                padding : 14px 32px;
+                margin-top: 20px;   
+                margin-bottom: 20px;
+            }
+            .btn:hover {
+                background-color :  rgb(105, 182, 105)
+            
+            }
+            .radio-option {
+                padding : 10px 40px;
+                cursor : pointer;
+                display : flex;
+                border-radius : 18px;
+                color :  rgb(84, 169, 84);
+            }
+             footer {
+      color : gray;
+      font-family: Arial, Helvetica, sans-serif;
+      font-style: italic;
+      text-align: center;
+      margin-top: 20px;
+     }
+            @media (max-width:768px){
+
+.container{
+    flex-direction:column;
+}
+
+.card{
+    width:100%;
+}
+
+body{
+    margin:15px;
+}
+
+button{
+    width:100%;
+    margin-top:10px;
+}
+
+}
+            
+        </style>
+    </head>
+
+    <body>
+        <div class = "container">
+        <h1 style = "text-align: center;color :rgb(84, 169, 84);"> Grind</h1>
+        <p style = "text-align: center;"> add info related to your description</p>
+            <div class = "card">
+            <form method = 'POST' action = '/add'>
+                <p> name : </p>
+                <input type = "text" name = "name" placeholder = "add your name">
+                <p> age : </p>
+                <input type = "number" name = "age" placeholder = "add your age">
+                <p> email address : </p>
+                <input type = "text" name = "email" placeholder = "enter your email address">
+                <p> academic achievement : </p>
+                <div class = "radio option">
+                <input type = "radio" name = "academic_achievement" value = "highshool diploma" >highschool diploma <br>
+                <input type = "radio" name = "academic_achievement" value = "bachelor's degree"> bachelor's degree <br>
+                <input type = "radio" name = "academic_achievement" value = "master's degree" > master's degree<br>
+                <input type = "radio" name = "academic_achievement" value = "phd" > phd <br>
+                </div>
+                <p> add skills you possess : </p>
+                <input type = "text" name = "skills" placeholder = " ">
+                <p> mention job opportunities you might be looking for </p>
+                <input type = "text" name = "job_description" placeholder = " ">
+
+                <button type = "submit" class = "btn"> submit info </button>
+            </form>
+            </div>
+        </div>
+        <footer>
+
+      <p>
+         &copy;2026 Grind 
+      </p>
+    </footer>
+    </body>
+</html>

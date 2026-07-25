@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Grind|Accessible Employment </title>
+    </head>
+    <style>
+     *{
+        margin : 0;
+        padding : 0;
+        box-sizing: border-box;
+     }
+
+     body {
+        background: fixed;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 40px 20px;
+
+     }
+    
+     .card {
+        background-color: rgb(241, 245, 249);
+        padding :30px;
+        box-shadow: inset;
+        max-width: 600px;
+        color : black;
+        margin: auto;
+        border-radius: 12px;
+        margin-bottom: 23px;
+     }
+     .card h1 {
+        margin-bottom: 20px;
+        text-align : center;
+     }
+     .card p {
+        margin-bottom: 12px;
+        margin-top: 12px;
+     }
+
+     .btn {
+        background-color : rgb(84, 169, 84);
+        padding : 18px 24px;
+        border-radius: 12px;
+        border-color:  rgb(84, 169, 84);
+        border : none;
+        cursor: pointer;
+        color :white;
+        margin-top: 16px;
+
+     }
+     .btn:hover {
+        background-color :  rgb(110, 170, 110);
+
+     }
+     .highlight {
+        font-family : Arial, Helvetica, sans-serif;
+        color : rgb(84, 169, 84);
+        font-weight: 700;
+     }
+
+     .container {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: large;
+        font-weight: 350;
+
+     }
+     .brand h1{
+        padding : 30px;
+        color : rgb(84, 169, 84);
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        text-align: center;
+     }
+
+     .brand p {
+        padding : 30px;
+        color : black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        text-align: center;
+     }
+     footer {
+      color : gray;
+      font-family: Arial, Helvetica, sans-serif;
+      font-style: italic;
+      text-align: center;
+      margin-top: 20px;
+     }
+     @media (max-width:768px){
+
+.container{
+    flex-direction:column;
+}
+
+.card{
+    width:100%;
+}
+
+body{
+    margin:15px;
+}
+
+button{
+    width:100%;
+    margin-top:10px;
+}
+
+}
+
+    
+    </style>
+<body>
+    <div class = "brand">
+        <h1> Grind</h1>
+        <p> Accessible and Versatile employment.where skill meets demand</p>
+    </div>
+    <div class = "container">
+        <div class = "card" >
+        <h2> your career is enhanced here </h2>
+        <p> <span class ="highlight"> grind</span> is a website that helps people especially the youth to get employed easily<br>
+            young people all over the world have been struggling to get jobs as it's often too hard to get any kind of opportunities<br>
+            like internships or just getting in a place where they are hiring.and with employers too,it's hard<br> 
+            to find a quality guy that actually going to put in some work or the guy who actually have the skils an employer desire.<br>
+            but grind has been to make issues like those easier and making employment more accessible.grind is a bridge between employers and employees<br>
+            .but to help us getting to know you better please fill this survey <br>
+        </p>
+        </div>
+
+        <div class = "container">
+        <form method = 'POST' action = '/survey'>
+            <div class = "card" >
+            <p> are you an employer or an employee</p>
+                <input type = "radio" name = "user_type" value = "employer" required>employer<br>
+                <input type = "radio" name = "user_type" value = "employee" required>employee<br>
+            <p> why did you choose grind ?</p>
+                <input type = "radio" name = "choice" value = "necessity" required>for financial necessities<br>
+                <input type = "radio" name = "choice" value = "experience" required>looking for experience in the workforce<br>
+                <input type = "radio" name = "choice" value = "sidejob" required>looking for a side job<br>
+                <input type = "radio" name = "choice" value = "other" required>other reasons<br>
+
+                <a href = '/add'><button class = "btn" > add your info</button></a>
+            </div>
+        </form>
+        </div>
+        <a href = 'view_info'><button class = "btn" style = "text-align: center;"> view info</button></a>
+    </div>
+    <footer>
+
+      <p>
+         &copy;2026 Grind 
+      </p>
+    </footer>
+</body>
+</html>

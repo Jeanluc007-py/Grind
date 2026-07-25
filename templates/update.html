@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> grind.com  </title>
+    <style>
+        *{
+            margin : 0;
+            padding : 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: fixed;
+            padding : 20px 40px;
+            font-family :Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        
+        .card {
+            background-color :aliceblue;
+            color : black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 350;
+            margin-bottom: 20px;
+            box-shadow: inset;
+            max-width: 600px;
+            padding : 30px;
+            margin :auto;
+            border-radius: 12px;
+        }
+        .btn {
+            background-color : rgb(84, 169, 84);
+        padding : 18px 24px;
+        border-radius: 12px;
+        border-color:  rgb(84, 169, 84);
+        border : none;
+        cursor: pointer;
+        color :white;
+        margin-top: 16px;
+        }
+        .btn:hover {
+            background : rgb(87, 157, 87)
+        }
+
+        footer {
+      color : gray;
+      font-family: Arial, Helvetica, sans-serif;
+      font-style: italic;
+      text-align: center;
+      margin-top: 20px;
+     }
+        @media (max-width:768px){
+
+.container{
+    flex-direction:column;
+}
+
+.card{
+    width:100%;
+}
+
+body{
+    margin:15px;
+}
+
+button{
+    width:100%;
+    margin-top:10px;
+}
+
+}
+    </style>
+</head>
+<body>
+    <div class = "card">
+    <form method = 'POST' action = '/edit/{{ id }}'>
+
+            <p> name : </p>
+            <input type = "text" name = "name" placeholder = "add your name">
+            <p> age : </p>
+            <input type = "number" name = "age" placeholder = "add your age">
+            <p> email address : </p>
+            <input type = "text" name = "email" placeholder = "enter your email address">
+            <p> academic achievement : </p>
+            <input type = "radio" name = "academic_achievement" value = "highshool diploma" >highschool diploma <br>
+            <input type = "radio" name = "academic_achievement" value = "bachelor's degree"> bachelor's degree <br>
+            <input type = "radio" name = "academic_achievement" value = "master's degree" > master's degree<br>
+            <input type = "radio" name = "academic_achievement" value = "phd" > phd <br>
+            <p> add skills you possess : </p>
+            <input type = "text" name = "skills" placeholder = " ">
+            <p> mention job opportunities you might be looking for </p>
+            <input type = "text" name = "job_description" placeholder = " ">
+
+            <button type = "submit" class = "btn"> submit info </button>
+    </form>
+    </div>
+    <a href = '/' style = "text-align: center;color : rgb(167, 227, 77)"> back home</a>
+    <footer>
+
+      <p>
+         &copy;2026 Grind 
+      </p>
+    </footer>
+</body>
+</html>
